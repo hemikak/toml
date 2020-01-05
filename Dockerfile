@@ -5,4 +5,4 @@ COPY src/toml src/toml
 COPY Ballerina.lock Ballerina.lock
 COPY Ballerina.toml Ballerina.toml
 
-RUN ballerina build -c --skip-tests toml
+RUN ballerina build -c toml
