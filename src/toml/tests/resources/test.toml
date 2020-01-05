@@ -1,0 +1,5 @@
+string_val = "foo-bar"
+int_val = 666
+boolean_val = true
+float_val = 3.14
+string_arr_val = ["ballerina", "Twitter", "endpoint", "connector"]
