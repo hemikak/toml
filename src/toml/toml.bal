@@ -18,7 +18,7 @@ import ballerinax/java;
 # Toml object
 public type Toml object {
     handle tomlObj = getTomlNative();
-    function __init(string tomlContent) {
+    public function __init(string tomlContent) {
         self.tomlObj = readNative(self.tomlObj, java:fromString(tomlContent));
     }
 
@@ -54,53 +54,53 @@ public type Toml object {
     }
 };
 
-public function getTomlNative() returns handle = @java:Constructor {
+function getTomlNative() returns handle = @java:Constructor {
     class: "com.moandjiezana.toml.Toml"
 } external;
 
-public function readNative(handle instance, handle content) returns handle = @java:Method {
+function readNative(handle instance, handle content) returns handle = @java:Method {
     name: "read",
     class: "com.moandjiezana.toml.Toml",
     paramTypes: ["java.lang.String"]
 } external;
 
 
-public function getStringNative(handle instance, handle key) returns handle = @java:Method {
+function getStringNative(handle instance, handle key) returns handle = @java:Method {
   name: "getString",
   class: "com.moandjiezana.toml.Toml"
 } external;
 
-public function getIntNative(handle instance, handle key) returns int = @java:Method {
+function getIntNative(handle instance, handle key) returns int = @java:Method {
   name: "getLong",
   class: "com.moandjiezana.toml.Toml"
 } external;
 
 
-public function getBooleanNative(handle instance, handle key) returns boolean = @java:Method {
+function getBooleanNative(handle instance, handle key) returns boolean = @java:Method {
   name: "getBoolean",
   class: "com.moandjiezana.toml.Toml"
 } external;
 
 
-public function getFloatNative(handle instance, handle key) returns float = @java:Method {
+function getFloatNative(handle instance, handle key) returns float = @java:Method {
   name: "getDouble",
   class: "com.moandjiezana.toml.Toml"
 } external;
 
 
-public function getStringListNative(handle instance, handle key) returns handle = @java:Method {
+function getStringListNative(handle instance, handle key) returns handle = @java:Method {
   name: "getList",
   class: "com.moandjiezana.toml.Toml"
 } external;
 
 
-public function getStringListLengthNative(handle instance) returns int = @java:Method {
+function getStringListLengthNative(handle instance) returns int = @java:Method {
   name: "size",
   class: "java.util.List"
 } external;
 
 
-public function getStringByIndexNative(handle instance, int index) returns handle = @java:Method {
+function getStringByIndexNative(handle instance, int index) returns handle = @java:Method {
   name: "get",
   class: "java.util.List"
 } external;
