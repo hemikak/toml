@@ -1,4 +1,4 @@
-FROM ballerina/ballerina:1.1.0
+FROM ballerina/ballerina:1.2.1
 
 COPY libs/ libs/
 COPY src/toml src/toml
